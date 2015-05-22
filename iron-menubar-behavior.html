@@ -17,8 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <script>
 
-  /** @polymerBehavior */
-  Polymer.IronMenubarBehavior = [{
+  Polymer.IronMenubarBehaviorImpl = {
 
     hostAttributes: {
       'role': 'menubar'
@@ -54,6 +53,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this._focusWithKeyboardEvent(event);
     }
 
-  }].concat(Polymer.IronMenuBehavior);
+  };
+
+  /** @polymerBehavior */
+  Polymer.IronMenubarBehavior = [Polymer.IronMenubarBehaviorImpl].concat(Polymer.IronMenuBehavior);
 
 </script>
